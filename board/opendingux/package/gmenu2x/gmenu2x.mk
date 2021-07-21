@@ -3,7 +3,7 @@
 # gmenu2x
 #
 #############################################################
-GMENU2X_VERSION = 9403b30
+GMENU2X_VERSION = f8a0822
 GMENU2X_SITE = $(call github,opendingux,gmenu2x,$(GMENU2X_VERSION))
 GMENU2X_DEPENDENCIES = sdl sdl_ttf sdl_gfx dejavu libpng fonts-droid
 GMENU2X_CONF_OPTS = -DBIND_CONSOLE=ON
@@ -27,5 +27,11 @@ endif
 ifeq ($(BR2_PACKAGE_LIBXDGMIME),y)
 GMENU2X_DEPENDENCIES += libxdgmime
 endif
+
+define GMENU2X_INSTALL_WRAPPER
+	mv $(TARGET_DIR)/usr/bin/gmenu2x $(TARGET_DIR)/usr/libexec/gmenu2x
+	$(INSTALL) -D -m 0755 board/opendingux/package/gmenu2x/gmenu2x.sh $(TARGET_DIR)/usr/bin/gmenu2x
+endef
+GMENU2X_POST_INSTALL_TARGET_HOOKS += GMENU2X_INSTALL_WRAPPER
 
 $(eval $(cmake-package))
