@@ -4,8 +4,8 @@
 #
 #############################################################
 
-GCWCONNECT_VERSION = dfa3343
-GCWCONNECT_SITE = $(call github,hanskokx,gcwconnect,$(GCWCONNECT_VERSION))
+GCWCONNECT_VERSION = 11d349b
+GCWCONNECT_SITE = $(call github,citral23,gcwconnect,$(GCWCONNECT_VERSION))
 GCWCONNECT_DEPENDENCIES = host-dos2unix gmenu2x
 
 ifeq ($(BR2_PACKAGE_GMENU2X),y)
