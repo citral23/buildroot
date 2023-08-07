@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-UBIBOOT_VERSION = dc54030
-UBIBOOT_SITE = $(call github,pcercuei,UBIBoot,$(UBIBOOT_VERSION))
+UBIBOOT_VERSION = c3f4917
+UBIBOOT_SITE = $(call github,citral23,UBIBoot,$(UBIBOOT_VERSION))
 UBIBOOT_BOARD_NAME = $(call qstrip,$(BR2_PACKAGE_UBIBOOT_BOARDNAME))
 
 UBIBOOT_LICENSE = GPLv2+
