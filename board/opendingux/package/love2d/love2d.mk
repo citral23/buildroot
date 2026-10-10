@@ -3,11 +3,12 @@
 # love2d
 #
 #############################################################
-LOVE2D_VERSION = 11.3
+LOVE2D_VERSION = 11.5
 LOVE2D_SITE = $(call github,love2d,love,$(LOVE2D_VERSION))
 LOVE2D_LICENSE = zlib
 LOVE2D_LICENSE_FILES = license.txt
 LOVE2D_SUPPORTS_IN_SOURCE_BUILD = NO
+LOVE2D_CONF_OPTS += -DBUILD_SHARED_LIBS=OFF
 
 LOVE2D_DEPENDENCIES = libgles luainterpreter sdl2 \
 					  libmodplug libvorbis openal \
