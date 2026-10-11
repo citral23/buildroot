@@ -1,0 +1,4 @@
+config BR2_PACKAGE_HOST_PYTHON_PYCPARSER
+	bool "host python-pycparser"
+	help
+	  https://github.com/eliben/pycparser
